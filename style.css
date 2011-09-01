@@ -1,0 +1,72 @@
+#text {
+  width: 50%;
+  float: right;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 1em;     
+}
+
+#imapc {
+  display: block;
+  width: 50%;
+  float: right;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em;
+  border: 0;
+}
+
+#imap{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#areas {
+  width: 50%;
+}
+
+figcaption {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+td, th {
+  border: 1px solid silver;
+  padding: 0.2em 1em;
+}
+
+tr {
+  background: white;
+}
+
+tr.red {
+  background: #FFF0F0;
+}
+
+tr.gray {
+  background: #CFCFCF;
+}
+
+tr:nth-child(even) {
+  background: #F0F0F0;
+}
+
+tr:nth-child(even).red {
+  background: #FFE6E6;
+}
+
+tr:nth-child(even).gray {
+  background: #CCCCCC;
+}
+                
+tr.highlight, tr:hover, tr:nth-child(even):hover,
+tr.red.highlight, tr.gray.highlight {
+  background: lightyellow;
+}
