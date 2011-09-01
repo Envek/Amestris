@@ -154,6 +154,14 @@
           font-family: Arial;
           -inkscape-font-specification: Arial;
         }
+
+        .area:hover {
+          fill: #FFFF66;
+        }
+        .city:hover {
+          fill: yellow;
+          stroke: red;
+        }
     </style>
   </defs>
   <path
