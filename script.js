@@ -30,4 +30,17 @@ $(window).load(function () {
   var viewBox = svgdom.rootElement.getAttribute("viewBox").split(" ");
   var aspectRatio = viewBox[2] / viewBox[3];
   svgobject.height = parseInt(svgobject.offsetWidth / aspectRatio);
+
+  // Взаимодействие карты и таблички регионов
+  $("#areas input[type=checkbox]").change(function() {
+    var row = $(this).parent().parent();
+    var id = row.attr("id");
+    if (this.checked) {
+      row.addClass("selected");
+      $("#"+id, svgdom).myAddClass("selected");
+    } else {
+      row.removeClass("selected");
+      $("#"+id, svgdom).myRemoveClass("selected");
+    }
+  });
 });

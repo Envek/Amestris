@@ -70,3 +70,10 @@ tr.highlight, tr:hover, tr:nth-child(even):hover,
 tr.red.highlight, tr.gray.highlight {
   background: lightyellow;
 }
+
+tr.selected {
+  background: #CCCCFF;
+}
+tr:nth-child(even).selected {
+  background: #BBBBFF;
+}
