@@ -157,10 +157,10 @@
           -inkscape-font-specification: Arial;
         }
 
-        .area:hover {
+        .area:hover, .area.highlight {
           fill: #FFFF66;
         }
-        .city:hover {
+        .city:hover, .city.highlight {
           fill: yellow;
           stroke: red;
         }

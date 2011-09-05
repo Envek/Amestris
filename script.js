@@ -56,4 +56,27 @@ $(window).load(function () {
       elements.myRemoveClass("hidden");
     }
   });
+
+  // Подсвечиваем регион на карте при наведении мыши на соотв. строку таблицы.
+  $("#areas tr").hover(
+    function () {
+      var id = $(this).attr("id");
+      $("#"+id, svgdom).myAddClass("highlight");
+    }, 
+    function () {
+      var id = $(this).attr("id");
+      $("#"+id, svgdom).myRemoveClass("highlight");
+    }
+  );  
+  // Подсвечиваем строку в таблице при наведении мыши на соотв. регион на карте
+  $(svgdom.getElementsByClassName("area")).hover(
+    function () {
+      var id = $(this).attr("id");
+      $("#areas #"+id).addClass("highlight");
+    }, 
+    function () {
+      var id = $(this).attr("id");
+      $("#areas #"+id).removeClass("highlight");
+    }
+  );
 });

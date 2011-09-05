@@ -65,15 +65,16 @@ tr:nth-child(even).red {
 tr:nth-child(even).gray {
   background: #CCCCCC;
 }
-                
-tr.highlight, tr:hover, tr:nth-child(even):hover,
-tr.red.highlight, tr.gray.highlight {
-  background: lightyellow;
-}
 
 tr.selected {
   background: #CCCCFF;
 }
 tr:nth-child(even).selected {
   background: #BBBBFF;
+}
+               
+tr.highlight, tr:hover, tr:nth-child(even):hover, tr:nth-child(even).highlight,
+tr.red.highlight, tr.gray.highlight, tr.selected.highlight {
+  background: #FFFF99;
+  color: red;
 }
