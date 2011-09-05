@@ -43,4 +43,17 @@ $(window).load(function () {
       $("#"+id, svgdom).myRemoveClass("selected");
     }
   });
+
+  // Скрытие названий по чекбоксу
+  $("#titleswitch").change(function () {
+    var elements = $(svgdom.getElementsByClassName("areatitle"))
+      .add($(svgdom.getElementsByClassName("citytitle")))
+      .add($(svgdom.getElementsByClassName("titlebox")))
+      .add($(svgdom.getElementsByClassName("titleline")));
+    if (this.checked) {
+      elements.myAddClass("hidden");
+    } else {
+      elements.myRemoveClass("hidden");
+    }
+  });
 });

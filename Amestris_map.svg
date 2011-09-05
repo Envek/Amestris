@@ -168,6 +168,10 @@
         .selected {
           fill: #CCCCFF;
         }
+
+        .hidden {
+          visibility: hidden;
+        }
     </style>
   </defs>
   <path
