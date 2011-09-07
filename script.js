@@ -79,4 +79,20 @@ $(window).load(function () {
       $("#areas #"+id).removeClass("highlight");
     }
   );
+
+  // Меняем значения на карте значениями из таблицы
+  $("input[name=tabledata]").change(function () {
+    var descnum = $(this).parent().prevAll().length+1;
+    $("#areas tbody tr").each(function() {
+      var id = $(this).attr("id").substring(4);
+      var value = $(this).children(":nth-child("+descnum+")").text();
+      $("#text"+id, svgdom).text(value);
+    });
+  });
+  $("#resetswitch").change(function () {
+    $("#areas tbody tr").each(function() {
+      var id = $(this).attr("id").substring(4);
+      $("#text"+id, svgdom).text("");
+    });
+  });
 });
