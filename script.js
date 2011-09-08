@@ -95,4 +95,24 @@ $(window).load(function () {
       $("#text"+id, svgdom).text("");
     });
   });
+
+  // Всплывающие подсказки
+  $(svgdom.getElementsByClassName("area")).tooltip({ 
+    track: true, 
+    delay: 0, 
+    showURL: false, 
+    fade: 250,
+    bodyHandler: function() {
+      var id     = $(this).attr("id");
+      var area   = $("#areas #"+id+" td:nth-child(2)").text();
+      var result = $("<p>").append($("<strong>").text(area));
+      $("#areas #"+id+" td:nth-child(2)").nextAll().each(function(){
+        var pos = $(this).prevAll().length+1;
+        var title = $("#areas thead th:nth-child("+pos+")").text();
+        var value = $(this).text();
+        result.append($("<p>").text(title + ": " + value));
+      });
+      return result;
+    }
+  });
 });

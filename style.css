@@ -78,3 +78,17 @@ tr.red.highlight, tr.gray.highlight, tr.selected.highlight {
   background: #FFFF99;
   color: red;
 }
+
+/* Всплывающие подсказки */
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	border: 1px solid #111;
+	background-color: #eee;
+	padding: 5px;
+	opacity: 0.85;
+}
+
+#tooltip p {
+  margin: 0;
+}
