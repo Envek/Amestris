@@ -24,7 +24,9 @@
 }
 
 #areas {
-  width: 50%;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 figcaption {
@@ -34,12 +36,16 @@ figcaption {
 table {
   border-collapse: collapse;
   border: 1px solid black;
-  box-sizing: border-box;
 }
 
 td, th {
   border: 1px solid silver;
   padding: 0.2em 1em;
+}
+
+thead th {
+  background: #E0E0E0;
+  color: black;
 }
 
 tr {
