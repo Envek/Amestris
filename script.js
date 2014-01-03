@@ -8,14 +8,12 @@ jQuery.fn.myAddClass = function (classTitle) {
 }
 jQuery.fn.myRemoveClass = function (classTitle) {
   return this.each(function() {
-      var oldClass = jQuery(this).attr("class");
-      var startpos = oldClass.indexOf(classTitle);
-      var endpos = startpos + classTitle.length;
-      var newClass = oldClass.substring(0, startpos).trim() + " " + oldClass.substring(endpos).trim();
-      if (!newClass.trim())
+      var oldClassString = ' '+jQuery(this).attr("class")+' ';
+      var newClassString = oldClassString.replace(new RegExp(' '+classTitle+' ','g'), ' ').trim()
+      if (!newClassString)
         jQuery(this).removeAttr("class");
       else
-        jQuery(this).attr("class", newClass.trim());
+        jQuery(this).attr("class", newClassString);
   });
 }
 
